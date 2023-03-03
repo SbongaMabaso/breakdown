@@ -8,7 +8,9 @@ const Home = () => {
         </div>
 
         <div className="w-1/2 p-9 mt-20 shadow-lg bg-white rounded-md">
-            <h2>Display Info</h2>
+            <p className="text-center">
+              Create New Ticket
+            </p>
         </div>
     </div>
   )
