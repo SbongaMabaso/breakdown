@@ -1,4 +1,5 @@
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -6,7 +7,8 @@ function App() {
       {/* <h1 className="text-3xl font-bold underline">
         BreakDown Mob
       </h1> */}
-      <Home />
+      {/* <Home /> */}
+      <Login />
     </div>
   );
 }
