@@ -5,9 +5,6 @@ import Register from "./pages/Register";
 function App() {
   return (
     <div className="App">
-      {/* <h1 className="text-3xl font-bold underline">
-        BreakDown Mob
-      </h1> */}
       <Home />
       {/* <Login /> */}
       {/* <Register /> */}
