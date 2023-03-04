@@ -9,12 +9,12 @@ const Login = () => {
             {/* Driver Name input */}
             <div className='mt-2'>
                 <label for="name" className="block text-base mb-2">Driver Name</label>
-                <input type="text" id="name" className="border w-full taxt-base px-2 py-1 rounded-md" placeholder="Enter Driver Name."/>
+                <input type="text" id="name" className="border border-b-4 w-full taxt-base px-2 py-1 rounded-md" placeholder="Enter Driver Name."/>
             </div>
             {/* Password input */}
             <div className='mt-3'>
                 <label for="password" className="block text-base mb-2">Password</label>
-                <input type="password" id="password" className="border w-full taxt-base px-2 py-1 rounded-md" placeholder="Enter Password."/>
+                <input type="password" id="password" className="border border-b-4 w-full taxt-base px-2 py-1 rounded-md" placeholder="Enter Password."/>
             </div>
             {/* Login Button */}
             <div className='mt-5'>
