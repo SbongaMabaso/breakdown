@@ -8,9 +8,9 @@ function App() {
       {/* <h1 className="text-3xl font-bold underline">
         BreakDown Mob
       </h1> */}
-      {/* <Home /> */}
+      <Home />
       {/* <Login /> */}
-      <Register />
+      {/* <Register /> */}
     </div>
   );
 }
