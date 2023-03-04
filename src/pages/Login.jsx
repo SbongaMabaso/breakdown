@@ -18,7 +18,7 @@ const Login = () => {
             </div>
             {/* Login Button */}
             <div className='mt-5'>
-                <button className="w-full rounded-md border-1 border-indigo-600 bg-indigo-400 hover:bg-indigo-200 text-white hover:text-black">
+                <button type="submit" className="w-full rounded-md border-1 border-indigo-600 bg-indigo-400 hover:bg-indigo-200 text-white hover:text-black">
                     Login
                 </button>
             </div>
