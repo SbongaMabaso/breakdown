@@ -2,7 +2,8 @@
 {
     public class Breakdown
     {
-        public string BreakdownRef { get; set; }
+        public int BreakdownId { get; set; }
+        public string BreakdownRef { get; set; } = string.Empty;
         public string CompanyName { get; set; } = string.Empty;
         public string DriverName { get; set; } = string.Empty;
         public string RegistrationNumber { get; set; } = string.Empty;
