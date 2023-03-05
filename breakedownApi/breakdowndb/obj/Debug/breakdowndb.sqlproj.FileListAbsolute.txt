@@ -1,0 +1,10 @@
+C:\Users\Sbong\OneDrive\Desktop\justFiles\myProj\breakdown\breakedownApi\breakdowndb\bin\Debug\breakdowndb.dacpac
+C:\Users\Sbong\OneDrive\Desktop\justFiles\myProj\breakdown\breakedownApi\breakdowndb\bin\Debug\breakdowndb.dll
+C:\Users\Sbong\OneDrive\Desktop\justFiles\myProj\breakdown\breakedownApi\breakdowndb\bin\Debug\breakdowndb.pdb
+C:\Users\Sbong\OneDrive\Desktop\justFiles\myProj\breakdown\breakedownApi\breakdowndb\obj\Debug\breakdowndb.sqlproj.AssemblyReference.cache
+C:\Users\Sbong\OneDrive\Desktop\justFiles\myProj\breakdown\breakedownApi\breakdowndb\obj\Debug\Model.xml
+C:\Users\Sbong\OneDrive\Desktop\justFiles\myProj\breakdown\breakedownApi\breakdowndb\obj\Debug\refactor.xml
+C:\Users\Sbong\OneDrive\Desktop\justFiles\myProj\breakdown\breakedownApi\breakdowndb\obj\Debug\postdeploy.sql
+C:\Users\Sbong\OneDrive\Desktop\justFiles\myProj\breakdown\breakedownApi\breakdowndb\obj\Debug\predeploy.sql
+C:\Users\Sbong\OneDrive\Desktop\justFiles\myProj\breakdown\breakedownApi\breakdowndb\obj\Debug\breakdowndb.dll
+C:\Users\Sbong\OneDrive\Desktop\justFiles\myProj\breakdown\breakedownApi\breakdowndb\obj\Debug\breakdowndb.pdb
