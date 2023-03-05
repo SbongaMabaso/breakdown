@@ -80,7 +80,7 @@ namespace breakedownApi.Controllers
         public async Task<ActionResult<List<Driver>>> UpdateDriver(Driver driver)
         {
             using var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
-            await connection.ExecuteAsync("UPDATE drivers SET drivername=@drivername, companyname=@companyname, registrationNumber=@registrationNumber where id = @Id", driver);
+            await connection.ExecuteAsync("UPDATE drivers SET drivername=@drivername, companyname=@companyname, registrationNumber=@registrationNumber where DriverId = @DriverId", driver);
             return Ok(await SelectAllDrivers(connection));
         }
 
