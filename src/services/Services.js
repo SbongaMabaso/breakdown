@@ -3,7 +3,7 @@ import axios from "axios";
 class RegistrationService {
     postDriverInfo = async (item) => {
         try {
-            const response = await axios.post("Breakdown/AddDriver", {
+            const response = await axios.post("api/Breakdown/AddDriver", {
                 "driverName": item.DriverName,
                 "companyName": item.CompanyName,
                 "registrationNumber": item.RegistrationNumber,

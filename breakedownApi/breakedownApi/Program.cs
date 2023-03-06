@@ -1,5 +1,16 @@
 var builder = WebApplication.CreateBuilder(args);
 
+var AllowAccess = "_allowaccess";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: AllowAccess,
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod();
+        });
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -15,6 +26,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(AllowAccess);
 
 app.UseHttpsRedirection();
 
