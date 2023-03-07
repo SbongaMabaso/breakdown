@@ -18,7 +18,6 @@ const Register = () => {
             Password: password.value,
             RepeatPassword: repeatPass.value,
         });
-        debugger;
         if(response.status === 200){
             alert("Driver added!");
             // if(response.data.DriverId != 0){

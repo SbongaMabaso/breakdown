@@ -1,6 +1,6 @@
 import axios from "axios";
 // import { Route, Routes } from "react-router-dom";
-// import Home from "./pages/Home";
+import Home from "./pages/Home";
 // import Login from "./pages/Login";
 import Register from "./pages/Register";
 
@@ -17,7 +17,8 @@ function App() {
         <Route path="/" exact component={() =><Register />}/>
         <Route path="/home" exact component={() =><Home />}/>
       </Routes> */}
-      <Register />
+      <Home />
+      {/* <Register /> */}
     </div>
   );
 }
