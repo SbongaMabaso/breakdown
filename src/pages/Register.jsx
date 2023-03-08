@@ -20,9 +20,6 @@ const Register = () => {
         });
         if(response.status === 200){
             alert("Driver added!");
-            // if(response.data.DriverId != 0){
-            //     navigate('/Home');
-            // }
         } else {
             alert("Filed");
         }

@@ -38,7 +38,7 @@ namespace breakedownApi.Controllers
         public async Task<ActionResult<List<Breakdown>>> CreateBreakdown(Breakdown breakdown)
         {
             using var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
-            await connection.ExecuteAsync("insert into breakdowns (ref, name, driver, reg, date) values (@ref, @name, @driver, @reg, @date)", breakdown);
+            await connection.ExecuteAsync("insert into breakdowns (BreakdownRef, CompanyName, DriverName, RegistrationNumber, BreakdownDate, Fk_DriverId) values (@BreakdownRef, @CompanyName, @DriverName, @RegistrationNumber, @BreakdownDate, @Fk_DriverId)", breakdown);
             return Ok(await SelectAllBreakdowns(connection));
         }
 
@@ -46,7 +46,7 @@ namespace breakedownApi.Controllers
         public async Task<ActionResult<List<Breakdown>>> UpdateBreakdown(Breakdown breakdown)
         {
             using var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
-            await connection.ExecuteAsync("update breakdowns set ref=@ref, name=@name, driver=@driver, reg=@reg, date=@date where id = @Id", breakdown);
+            await connection.ExecuteAsync("update breakdowns set BreakdownRef=@BreakdownRef, CompanyName=@CompanyName, DriverName=@DriverName, RegistrationNumber=@RegistrationNumber, BreakdownDate=@BreakdownDate where id = @Id", breakdown);
             return Ok(await SelectAllBreakdowns(connection));
         }
 
@@ -73,6 +73,26 @@ namespace breakedownApi.Controllers
         {
             using var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
             var driver = await connection.QueryFirstAsync<Driver>("select * from drivers where DriverId = @Id", new { Id = DriverId });
+            return Ok(driver);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<Driver>>> GetAllDriver()
+        {
+            using var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
+            IEnumerable<Driver> drivers = await SelectAllDrivers(connection);
+            return Ok(drivers);
+        }
+
+        [HttpGet("{drivername}/{password}")]
+        public async Task<ActionResult<List<Driver>>> GetActiveDriver(string drivername, string password)
+        {
+            using var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
+            var driver = await connection.QueryFirstAsync<Driver>("select * from drivers where DriverName = @drivername AND Password = @password",
+                new { 
+                    DriverName = @drivername,
+                    Password = @password
+                });
             return Ok(driver);
         }
 

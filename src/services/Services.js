@@ -47,6 +47,17 @@ class RegistrationService {
             return [];
         }
     }
+
+    getDriver = async (driverName, Password) => {
+        try {
+            // const response = await axios.get(`api/Breakdown/GetActiveDriver?drivername=${driverName}&password=${Password}`);
+            const response = await axios.get(`api/Breakdown/GetActiveDriver/${driverName}/${Password}`);
+            return response;
+        } catch (error) {
+            console.log(error);
+            return [];
+        }
+    }
 }
 
 export default new RegistrationService();

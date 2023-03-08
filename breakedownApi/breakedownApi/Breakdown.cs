@@ -8,6 +8,7 @@
         public string DriverName { get; set; } = string.Empty;
         public string RegistrationNumber { get; set; } = string.Empty;
         public DateTime BreakdownDate { get; set; } = DateTime.Now;
+        public int Fk_DriverId { get; set; }
     }
 
     public class Driver

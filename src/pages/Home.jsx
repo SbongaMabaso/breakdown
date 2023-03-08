@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import RegistrationService from '../services/Services'
 
@@ -25,8 +24,9 @@ const Home = () => {
             CompanyName: company.value,
             RegistrationNumber: regnumber.value,
             // BreakdownDate: datetime.now(),
+            // Fk_DriverId: DriverId.value
         });
-
+        debugger;
         if(response.status === 200){
             alert("Driver added!");
         } else {
@@ -38,7 +38,6 @@ const Home = () => {
     const fetchDriverInfo = async (DriverId) => {
         try {
             const res = await RegistrationService.getDriverInfo(DriverId);
-            // const res = await axios.get(`https://localhost:7141/api/Breakdown/GetDriver/${DriverId}`);
             setDriver(res.data.driverName);
             setCompany(res.data.companyName);
             setRegnumber(res.data.registrationNumber);
@@ -48,7 +47,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        fetchDriverInfo(4) //need to pass Id of an active driver
+        fetchDriverInfo(1) //need to pass Id of an active driver
     }, []);
 
   return (
